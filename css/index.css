@@ -1,0 +1,199 @@
+:root {
+  --aq_blue:aqua;
+  --yellow: yellow;
+  --red: red;
+  --blue: blue;
+  --grey:grey;
+  --backgrey: #EBEDEF;
+  --backred:#E74C3C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form, input, label, textarea, option, select {
+  font-size: inherit;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  color: var(--blue);
+}
+
+body {
+  font-weight: bold;
+}
+
+form fieldset {
+  background-color: var(--aq_blue);
+  margin: 0.5em;
+  padding: 0 0 0.5em 0.5em;
+  border-radius: 0.2em;
+}
+
+form legend {
+  background-color: var(--red);
+  margin: 0.5em;
+  border-radius: 0.2em;
+  color: whitesmoke;
+  font-weight: 100;
+}
+
+form label {
+  /* width:100%; */
+  font-weight: bold;
+  margin: 0.5em;
+  display: inline;
+}
+
+form input[type=text] {
+  background-color: var(--yellow);
+  padding: 0.1em;
+  border-radius: 0.2em;
+  border-top: 1px solid var(--grey);
+  border-left: 1px solid var(--grey);
+  display: inline;
+}
+
+form input[type=radio] {
+  margin-left: 0.4em;
+  display: inline;
+}
+
+form select {
+  margin: 2em 2em 0 0;
+  display: inline;
+  background-color: white;
+}
+
+form input[type=checkbox] {
+  margin-left: 0.4em;
+  display: inline;
+}
+
+form input[type=range] {
+  margin: 0.8em 0.5em;
+  display: inline;
+}
+
+form input[type=date] {
+  margin: 0.3em 0.6em;
+  display: inline;
+  background-color: white;
+}
+
+form input[type=submit] {
+  margin-left: 0.5em;
+  border: 1px solid var(--grey);
+  background: var(--backgrey);
+  border-radius: 0.3em;
+  text-align: center;
+  font-size: inherit;
+  padding: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline;
+}
+
+form input[type=submit]:hover {
+  border: 3px solid var(--blue);
+}
+
+form input[type=reset] {
+  margin-left: 0.5em;
+  border: 1px solid var(--grey);
+  background: var(--backgrey);
+  border-radius: 0.3em;
+  text-align: center;
+  font-size: inherit;
+  padding: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline;
+}
+
+form input[type=reset]:hover {
+  border: 3px solid var(--blue);
+}
+
+form button {
+  margin: 0.5em;
+  border: 1px solid var(--red);
+  background: var(--backred);
+  border-radius: 0.3em;
+  text-align: center;
+  font-size: inherit;
+  padding: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline;
+}
+
+form button:hover {
+  border: 3px solid var(--blue);
+}
+
+.error-cp {
+  outline-color: red;
+}
+
+.msg {
+  min-height: 20vh;
+  max-width: 40%;
+  margin: 200px auto;
+  position: fixed;
+  top: 5%;
+  left: 40%;
+}
+.msg.cp-error, .msg.error {
+  background-color: red;
+}
+.msg.cp-error.hidden, .msg.error.hidden {
+  display: none;
+}
+.msg.correct {
+  background-color: #23b623;
+}
+.msg.correct.hidden {
+  display: none;
+}
+.msg .text {
+  color: white;
+  padding: 3em;
+  font-size: 1.2;
+}
+.msg .popup-close {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  right: 1em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  form select {
+    display: block;
+  }
+}
