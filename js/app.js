@@ -12,8 +12,7 @@ const dateIn        = document.querySelector('#dateIn').value;
 const valoracionBtn = document.querySelector('#valoracionBtn');
 const dateBtn       = document.querySelector('#dateBtn');
 const cuentaBtn     = document.querySelector('#cuentaBtn');
-const pruebatBtn    = document.querySelector('#pruebaBtn');
-const submittBtn    = document.querySelector('#submitBtn');
+const submitBtn    = document.querySelector('#submit');
 const popup 		= document.querySelector('.msg');
 const popupError 	= document.querySelector('.error');
 const popupCperror 	= document.querySelector('.cp-error');
@@ -47,7 +46,7 @@ dateBtn.addEventListener('click', function(){
 	alert(`El dia de la realización de la encuesta es un ${nameDay}`);
 })
 
-pruebatBtn.addEventListener('click', function(){
+submitBtn.addEventListener('click', function(){
 	validateCP();
 })
 
@@ -65,6 +64,7 @@ function validateCP(){
 	}
 	else {
 		popupError.classList.remove('hidden');
+		return;
 	}
     if (patron.test(valor) && (!isNaN(valor))){
         cp.className="correcto";
